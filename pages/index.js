@@ -249,12 +249,12 @@ const Home = () => {
     const requestOptions = {
       method: 'GET',
     };
-    const res = await fetch(`http://https://testing-node-torrnt.herokuapp.com//download?hash=${hash}`, requestOptions);
+    const res = await fetch(`https://testing-node-torrnt.herokuapp.com/download?hash=${hash}`, requestOptions);
     const data = await res.json();
     const { name, path } = await data;
     setTorrentName(name);
     setTimeout(() => {
-      setVideo(`http://https://testing-node-torrnt.herokuapp.com//torrents/${path}`);
+      setVideo(`https://testing-node-torrnt.herokuapp.com/torrents/${path}`);
       setIsVideo(true);
       setIsLoading(false);
     }, 15000);
