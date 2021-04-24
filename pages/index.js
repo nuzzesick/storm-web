@@ -244,20 +244,33 @@ const Home = () => {
   const [hash, setHash] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const sendForm = async (e) => {
-    setIsLoading(true);
     e.preventDefault();
-    const requestOptions = {
-      method: 'GET',
-    };
-    const res = await fetch(`https://testing-node-torrnt.herokuapp.com/download?hash=${hash}`, requestOptions);
-    const data = await res.json();
-    const { name, path } = await data;
-    setTorrentName(name);
-    setTimeout(() => {
-      setVideo(`https://testing-node-torrnt.herokuapp.com/torrents/${path}`);
-      setIsVideo(true);
-      setIsLoading(false);
-    }, 15000);
+    setIsLoading(true);
+    try {
+      const requestOptions = {
+        method: 'GET',
+      };
+      const res = await fetch(`https://testing-node-torrnt.herokuapp.com/download?hash=${hash}`, requestOptions);
+      const data = await res.json();
+      const { name, path } = await data;
+      setTorrentName(name);
+      const showVideo = setInterval(async () => {
+        if (!isVideo) {
+          await fetch(`https://testing-node-torrnt.herokuapp.com/torrents/${path}`)
+            .then((r) => {
+              if (r.ok) {
+                setVideo(`https://testing-node-torrnt.herokuapp.com/torrents/${path}`);
+                setIsVideo(true);
+                setIsLoading(false);
+                clearInterval(showVideo);
+              }
+            });
+        }
+      }, 3000);
+    } catch (error) {
+      return error;
+    }
+    return true;
   };
   return (
     <>
