@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import PropTypes from 'prop-types';
 import '../styles/globals.css';
 import Head from 'next/head';
 import Logo from '../assets/images/logo.svg';
@@ -24,4 +25,9 @@ const App = ({ Component, pageProps }) => (
     ;
   </>
 );
+
+App.propTypes = {
+  Component: PropTypes.func.isRequired,
+  pageProps: PropTypes.shape({}).isRequired,
+};
 export default App;
