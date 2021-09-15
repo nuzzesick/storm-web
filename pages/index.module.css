@@ -1,81 +1,110 @@
-.canvas {
-  position: absolute;
-  background: linear-gradient(180deg, #060514 0%, #060413 100%);
-  top: 0;
-}
-
-.appContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container {
   width: 100%;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8rem 0;
 }
 
-.blurContainer {
-  margin-top: 4.5rem;
-  background-color: #ffffff07;
-  backdrop-filter: blur(30px);
-  width: 60rem;
-  padding: 10rem 2rem;
-  border-radius: 0.5rem;
-  color: white;
-}
-
-.blurContainer video {
-  width: 100%;
-}
-
-.blurContainer h1 {
-  margin: 0 0 3rem 0;
-  text-align: center;
-  display: block;
-  white-space: pre-wrap;
-}
-
-.blurContainer form {
+.content {
+  width: 80%;
   display: flex;
   flex-direction: column;
 }
 
-.blurContainer input[type=text] {
-  margin: auto;
-  width: 70%;
-  height: 2rem;
-  border-radius: 0.3rem;
-  outline: 0;
-  border: 0;
-  font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0.742);
-  padding: 1rem;
-  transition-duration: 0.3s;
-  margin-bottom: 1.2rem;
-  text-align: center;
+.logoContainer {
+  display: flex;
+  align-items: center;
 }
 
-.blurContainer input[type=text]:focus {
-  background-color: white;
-  outline: 0;
+.logoContainer h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.4rem 0.8rem;
 }
 
-.blurContainer input[type=submit] {
-  width: 60%;
-  margin: auto;
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  border-radius: 0.3rem;
-  outline: 0;
-  border: 0;
-  background:#060514;
-  color: white;
+.content h2 {
+  font-size: 2.6rem;
   font-weight: 600;
-  transition-duration: 0.3s;
-  cursor: pointer;
+  color: #d8d8d8;
 }
 
-.blurContainer input[type=submit]:hover {
-  background: #5B50DE;
+.content span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #9b9b9b;
+  line-height: 2rem;
+}
+
+.linksContainer {
+  display: flex;
+  align-items: center;
+  margin: 2.5rem 0 0 0;
+}
+
+.linksContainer a:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #212121;
+  color: #ffffff;
+  border-radius: 3px;
+  width: fit-content;
+  padding: 1rem 2rem;
+  transition: 0.5s;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.linksContainer a:first-child:hover {
+  background-color: #3f69d6;
+  box-shadow: 0 0 8px black;
+}
+
+.linksContainer a:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  width: fit-content;
+  margin: 1rem 2rem;
+  transition: 0.5s;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.linksContainer a:last-child:hover {
+  color: #3f69d6;
+}
+
+.twitterButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 3px;
+  width: fit-content;
+  padding: 0.8rem 1.2rem;
+  transition: 0.5s;
+  font-size: 1.25rem;
+}
+
+.twitterButton:hover {
+  background-color: rgb(20, 20, 20);
+}
+
+.twitterButton svg {
+  fill: #ffffff;
+  margin-right: 0.6rem;
+  transition: 0.5s;
+}
+
+.twitterButton:hover svg {
+  fill: rgb(29, 155, 240);
 }
