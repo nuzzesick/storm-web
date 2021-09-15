@@ -2,7 +2,6 @@ import React from 'react';
 import WebTorrent from 'webtorrent';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import Image from 'next/image';
 import Logo from '../../../assets/images/logo.svg';
 import styles from './play.module.css';
 
@@ -38,7 +37,7 @@ const PlayPage = () => {
         <div className={styles.poweredBy}>
           Powered by
           <div className={styles.logoContainer}>
-            <Image src={Logo} width={16} height={16} />
+            <img src={Logo} width={16} height={16} alt="logo" />
             <span>Storm</span>
           </div>
         </div>

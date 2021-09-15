@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Logo from '../assets/images/logo.svg';
 import { ReactComponent as Twitter } from '../assets/images/twitter.svg';
 import styles from './index.module.css';
@@ -9,7 +8,7 @@ const Home = () => (
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.logoContainer}>
-          <Image src={Logo} width={46} height={46} />
+          <img src={Logo} width={46} height={46} alt="logo" />
           <h1>Storm</h1>
         </div>
         <h2>The way we see torrent clients has changed.</h2>
