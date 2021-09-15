@@ -1,11 +1,10 @@
 .container {
   width: 100%;
-  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  padding: 8rem 0;
+  padding: 4rem 0 0 0;
 }
 
 .content {
@@ -42,7 +41,7 @@
 .linksContainer {
   display: flex;
   align-items: center;
-  margin: 2.5rem 0 0 0;
+  margin: 2.5rem 0;
 }
 
 .linksContainer a:first-child {
@@ -82,6 +81,10 @@
   color: #3f69d6;
 }
 
+.twitterButtonContainer {
+  margin: 3rem 0;
+}
+
 .twitterButton {
   display: flex;
   align-items: center;
@@ -107,4 +110,18 @@
 
 .twitterButton:hover svg {
   fill: rgb(29, 155, 240);
+}
+
+.screenshotsContainer {
+  margin: 1rem 0;
+}
+
+.screenshotsContainer h3 {
+  color: #d8d8d8;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.screenshot {
+  width: 90%;
 }

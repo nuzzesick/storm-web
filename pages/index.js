@@ -13,10 +13,9 @@ const Home = () => (
         </div>
         <h2>The way we see torrent clients has changed.</h2>
         <span>
-          Storm comes with the idea of change the way we see torrent clients, because all of
-          them always have those typical tables with a lot of data that most of the regular users
-          doesn&apos;t understand it all, including us. We tried to put just the necessary features
-          with a beautiful UI/UX.
+          Storm comes with the idea of change the way we see torrent clients.
+          Traditional clients always have those tables with data you don&apos;t need to see.
+          Storm gives you just the necessary features with a beautiful UI/UX.
           <br />
           <br />
           Storm is an open source project, so if you want to build the best torrent client ever,
@@ -26,11 +25,20 @@ const Home = () => (
           <a href="https://github.com/nuzzesick/storm-desktop/releases" target="_blank" rel="noreferrer">Try beta now</a>
           <a href="https://github.com/nuzzesick/storm-desktop" target="_blank" rel="noreferrer">Contribute</a>
         </div>
+        <div className={styles.screenshotsContainer}>
+          <h2>Screenshots</h2>
+          <h3>Home </h3>
+          <img className={styles.screenshot} src="https://user-images.githubusercontent.com/27747658/128960457-05091489-730f-42a6-805e-4beb381ea8fa.png" alt="home" />
+          <h3>Settings</h3>
+          <img className={styles.screenshot} src="https://user-images.githubusercontent.com/27747658/128960480-7d548142-1cf7-4fcd-9b87-5f1b9deb9eeb.png" alt="home" />
+        </div>
       </div>
-      <a className={styles.twitterButton} href="https://twitter.com/nuzzze" target="_blank" rel="noreferrer">
-        <Twitter />
-        Follow me on Twitter
-      </a>
+      <div className={styles.twitterButtonContainer}>
+        <a className={styles.twitterButton} href="https://twitter.com/nuzzze" target="_blank" rel="noreferrer">
+          <Twitter />
+          Follow me on Twitter
+        </a>
+      </div>
     </div>
   </>
 );
